@@ -87,6 +87,16 @@ input {
     display: none;
 }
 
+#todo{
+    background-color: black;
+}
+
+#todo > a{
+    color: white;
+}
+
+/* clases */
+
 .icon{
     display: flex;
     padding-right: 20px;
@@ -160,10 +170,24 @@ input {
 }
 
 .opciones{
+    display: flex;
+    gap: 2vw;
+}
+
+.opciones > button{
     cursor: pointer;
-    align-items: center;
-    gap: 50px;
-    border-radius: 100%;
+    border-radius: 10%;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    height: 25px;
+}
+
+.opciones > button:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+.opciones > button > a{
+    font-size: 15px
 }
 
 .video {
@@ -235,4 +259,108 @@ input {
     max-width: 100%;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+    .video{
+        grid-template-columns: repeat(2, 1fr);
+        }
+}
+
+@media (max-width: 1000px){
+    .extra{
+        display: none;
+    }
+}
+
+@media (max-width: 963px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header > nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header > nav > ul > li > a > img{
+        min-width: 10px;
+        min-height: auto;
+    }
+
+    header > form {
+        order: 2;
+        width: 100%;
+        min-width: 200px;
+        justify-items: end;
+    }
+
+    #ñam{
+        display: inline;
+    }
+
+    #tú{
+        display: inline;
+    }
+
+    .extra2{
+        display: none;
+    }
+
+    .lista2{
+        display: none;
+    }
+    
+}
+
+
+@media (max-width: 740px) {
+
+    .extra2{
+        display: none;
+    }
+
+    .video{
+        grid-template-columns: 1fr;
+        }
+
+   .card {
+    padding: 5vw;
+    width: 65vw;
+    }     
+
+    .card-img {
+        height: 40vw;
+        width: 65vw;  
+    }
+
+    .card-body{
+        gap: 0px;
+    }
+    
+    .card-body > p {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .column{
+        display: none;
+    }
+
+    .card {
+        padding: 5vw;
+        width: 80vw;
+        } 
+
+    .card-img {
+        height: 50vw;
+        width: 80vw;  
+    }
+
+    .card-body > p {
+        font-size: 18px;
+    }
 }
