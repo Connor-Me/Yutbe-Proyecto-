@@ -61,7 +61,12 @@ input {
     border-radius: 100px;
 }
 
+footer{
+    display: none;
+}
+
 /* id */
+
 
 #buscar{
     height: 20px;
@@ -95,7 +100,9 @@ input {
     color: white;
 }
 
+
 /* clases */
+
 
 .icon{
     display: flex;
@@ -345,7 +352,48 @@ input {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 635px) {
+
+    main {
+        margin-bottom: 55px; /* crea una zona en blanco abajo */
+    }
+
+    footer{
+        display: inline;
+        position: fixed; /* Hace que esté fijo */
+        bottom: 0; /* Para que se vea abajo del todo */
+        width: 100%;
+        background-color: rgb(238, 239, 240);
+        border-top: 1px solid #6b6b6b9d;
+    }
+    
+    footer > ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+    
+    footer > ul > li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    footer > ul > li > img{
+        height: 25px;
+        width: 25px;
+    }
+
+    footer > ul > li > p {
+        margin: 0; /* bye bye margen predeterminado */
+    }
+
+
+    #extra{
+        display: none;
+    }
+
     .column{
         display: none;
     }
@@ -363,4 +411,9 @@ input {
     .card-body > p {
         font-size: 18px;
     }
+
+    .shorts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
