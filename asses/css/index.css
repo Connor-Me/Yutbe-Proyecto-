@@ -149,8 +149,8 @@ footer{
 }
 
 .lista > li > a:hover{
-        background: rgb(239, 238, 238);
-        border-radius: 20%;
+    background: rgb(239, 238, 238);
+    border-radius: 20%;
 }
 
 .lista2 > li > a:hover{
@@ -318,11 +318,18 @@ footer{
     .lista2{
         display: none;
     }
-    
+
+    .shorts{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
 @media (max-width: 740px) {
+
+    #extra{
+        display: none;
+    }
 
     .extra2{
         display: none;
@@ -349,6 +356,10 @@ footer{
     .card-body > p {
         margin-top: 5px;
         font-size: 16px;
+    }
+
+    .shorts{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -378,20 +389,16 @@ footer{
         flex-direction: column;
         align-items: center;
         gap: 0px;
+        cursor: pointer;
     }
     
     footer > ul > li > img{
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
     }
 
     footer > ul > li > p {
         margin: 0; /* bye bye margen predeterminado */
-    }
-
-
-    #extra{
-        display: none;
     }
 
     .column{
@@ -411,9 +418,4 @@ footer{
     .card-body > p {
         font-size: 18px;
     }
-
-    .shorts{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
